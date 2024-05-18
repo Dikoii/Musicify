@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+#toggle:checked ~ label div .toggle-circle {
+  transform: translateX(0.75rem);
+}
+
+.display-none {
+  @apply hidden;
+}
+
+@layer base {
+  h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  h5 {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-shadow {
+    box-shadow: inset 40rem -3rem 200px 7rem #1a1a1a;
+  }
+}
