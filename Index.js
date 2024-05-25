@@ -118,6 +118,12 @@ const popularSong = [
     songArtist: 'Faouzia, John Legend',
     poster: '/img/2.jpeg',
   },
+  {
+    id: 3,
+    songName: 'Minefields',
+    songArtist: 'Faouzia, John Legend',
+    poster: '/img/3.jpeg',
+  },
 ];
 
 let arrow_left = document.getElementById('left-arrow');
