@@ -40,68 +40,68 @@ moonIcon.addEventListener('click', () => {
 
 themeCheck();
 
-const music = new Audio('/audio/1.mp3');
+const music = new Audio('public/audio/1.mp3');
 
 const songs = [
   {
     id: 1,
     songName: 'Just The Way You Are',
     songArtist: 'Bruno Mars',
-    poster: '/img/1.jpeg',
+    poster: '/public/img/1.jpeg',
   },
   {
     id: 2,
     songName: 'Minefields',
     songArtist: 'Faouzia, John Legend',
-    poster: '/img/2.jpeg',
+    poster: '/public/img/2.jpeg',
   },
   {
     id: 3,
     songName: '8 Letters',
     songArtist: "Why Don't We",
-    poster: '/img/3.jpg',
+    poster: '/public/img/3.jpg',
   },
   {
     id: 4,
     songName: "Here's Your Perfect",
     songArtist: 'Jammie Miller',
-    poster: '/img/4.jpg',
+    poster: '/public/img/4.jpg',
   },
   {
     id: 5,
     songName: 'Impossible',
     songArtist: 'James Arthur',
-    poster: '/img/5.jpg',
+    poster: '/public/img/5.jpg',
   },
   {
     id: 6,
     songName: 'Arcade',
     songArtist: 'Duncan Laurence',
-    poster: '/img/6.jpg',
+    poster: '/public/img/6.jpg',
   },
   {
     id: 7,
     songName: 'Dusk Till Dawn',
     songArtist: 'Zayn, Sia',
-    poster: '/img/7.jpg',
+    poster: '/public/img/7.jpg',
   },
   {
     id: 8,
     songName: 'It Will Rain',
     songArtist: 'Bruno Mars',
-    poster: '/img/8.png',
+    poster: '/public/img/8.png',
   },
   {
     id: 9,
     songName: 'Drunk Text',
     songArtist: 'Henry Moodie',
-    poster: '/img/9.jpg',
+    poster: '/public/img/9.jpg',
   },
   {
     id: 10,
     songName: 'Blinding Lights',
     songArtist: 'The Weeknd',
-    poster: '/img/10.png',
+    poster: '/public/img/10.png',
   },
 ];
 
@@ -110,19 +110,19 @@ const popularSong = [
     id: 1,
     songName: 'Just The Way You Are',
     songArtist: 'Bruno Mars',
-    poster: '/img/1.jpeg',
+    poster: '/public/img/1.jpeg',
   },
   {
     id: 2,
     songName: 'Minefields',
     songArtist: 'Faouzia, John Legend',
-    poster: '/img/2.jpeg',
+    poster: '/public/img/2.jpeg',
   },
   {
     id: 3,
     songName: 'Minefields',
     songArtist: 'Faouzia, John Legend',
-    poster: '/img/3.jpeg',
+    poster: '/public/img/3.jpeg',
   },
 ];
 
@@ -164,7 +164,7 @@ masterPlay.addEventListener('click', () => {
 Array.from(document.getElementsByClassName('playlist')).forEach((e) => {
   e.addEventListener('click', (ind) => {
     index = ind.target.id;
-    music.src = `/audio/${index}.mp3`;
+    music.src = `public/audio/${index}.mp3`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
@@ -214,8 +214,8 @@ music.addEventListener('ended', () => {
     index = 0;
   }
 
-  music.src = `/audio/${index + 1}.mp3`;
-  poster_song.src = `/img/${index + 1}.${formats}`;
+  music.src = `public/audio/${index + 1}.mp3`;
+  poster_song.src = `/public/img/${index + 1}.${formats}`;
   music.play();
   masterPlay.classList.remove('bi-play-fill');
   masterPlay.classList.add('bi-pause-fill');
@@ -235,8 +235,8 @@ const playButton = document.getElementById('playButton');
 playButton.addEventListener('click', () => {
   const index = 1;
 
-  music.src = `/audio/${index}.mp3`;
-  poster_song.src = `/img/${index}.${formats}`;
+  music.src = `public/audio/${index}.mp3`;
+  poster_song.src = `/public/img/${index}.${formats}`;
   music.play();
   masterPlay.classList.remove('bi-play-fill');
   masterPlay.classList.add('bi-pause-fill');
@@ -287,8 +287,8 @@ back.addEventListener('click', () => {
     index = 0;
   }
 
-  music.src = `/audio/${songs[index].id}.mp3`;
-  poster_song.src = `/img/${songs[index].id}.${formats}`;
+  music.src = `public/audio/${songs[index].id}.mp3`;
+  poster_song.src = `/public/img/${songs[index].id}.${formats}`;
   music.play();
   masterPlay.classList.remove('bi-play-fill');
   masterPlay.classList.add('bi-pause-fill');
@@ -310,8 +310,8 @@ next.addEventListener('click', () => {
     index = 0;
   }
 
-  music.src = `/audio/${songs[index].id}.mp3`;
-  poster_song.src = `/img/${songs[index].id}.${formats}`;
+  music.src = `public/audio/${songs[index].id}.mp3`;
+  poster_song.src = `/public/img/${songs[index].id}.${formats}`;
   music.play();
   masterPlay.classList.remove('bi-play-fill');
   masterPlay.classList.add('bi-pause-fill');
